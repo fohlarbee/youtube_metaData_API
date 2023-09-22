@@ -13,7 +13,7 @@ const image = document.querySelector('#img')
 metaDataForm.addEventListener('submit', async (e) => {
     e.preventDefault()
 
-    const response = await fetch('http://localhost:4000/openai/meta', {
+    const response = await fetch('https://nodejs-youtube-data-generator-3bab8c07c8f0.herokuapp.com/openai/meta', {
         method:'POST',
         headers:{'Content-Type': 'application/json'},
         body: JSON.stringify({title: metaDataForm.title.value})
@@ -31,7 +31,7 @@ metaDataForm.addEventListener('submit', async (e) => {
 imageForm.addEventListener('submit', async (e) => {
     e.preventDefault()
 
-    const response = await fetch('http://localhost:4000/openai/image', {
+    const response = await fetch('https://nodejs-youtube-data-generator-3bab8c07c8f0.herokuapp.com/openai/image', {
         method:'POST',
         headers:{'Content-Type': 'application/json'},
         body: JSON.stringify({prompt: imageForm.prompt.value})
