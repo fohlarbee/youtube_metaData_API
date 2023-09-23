@@ -31,7 +31,7 @@ metaDataForm.addEventListener('submit', async (e) => {
 imageForm.addEventListener('submit', async (e) => {
     e.preventDefault()
 
-    const response = await fetch('https://youtube-metadata-generator-1403ea2b1eaf.herokuapp.com/image', {
+    const response = await fetch('https://youtube-metadata-generator-1403ea2b1eaf.herokuapp.com/openai/image', {
         method:'POST',
         headers:{'Content-Type': 'application/json'},
         body: JSON.stringify({prompt: imageForm.prompt.value})
